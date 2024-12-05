@@ -9,5 +9,9 @@ return [
     'disk'=>'public',
 
     // Folder on which the json files will be generated
-    'path'=>'/shared'
+    'path'=>'/shared',
+
+    // User related config incase you name User Entity something else, e.g. Customer
+    "user_table"=> 'users',
+    "user_model"=> 'App\\Models\\User'
 ];

@@ -18,8 +18,8 @@ class LaravelEnumsToJsonServiceProvider extends PackageServiceProvider
         $package
             ->name('laravel-enums-to-json')
             ->hasConfigFile()
-            ->setBasePath(__DIR__)
-            ->hasMigration('create_laravel_enums_to_json_table')
+            ->hasRoute('api')
+            ->hasMigration('create_posts_related_tables')
             ->hasCommand(LaravelEnumsToJsonCommand::class);
     }
 }
