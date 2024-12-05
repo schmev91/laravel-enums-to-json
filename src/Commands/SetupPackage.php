@@ -2,6 +2,7 @@
 namespace SassLaravel\LaravelEnumsToJson\Commands;
 
 use Illuminate\Console\Command;
+use SassLaravel\LaravelEnumsToJson\Models\Post;
 
 class SetupPackage extends Command
 {
@@ -20,6 +21,12 @@ class SetupPackage extends Command
 
         // Run the migrations
         $this->call("migrate");
+
+        try {
+            Post::factory(10)->create();
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
 
         $this->info("Package setup completed successfully.");
     }
