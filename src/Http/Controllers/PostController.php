@@ -7,6 +7,6 @@ class PostController
 {
     public function index()
     {
-        return response()->json(Post::factory(10)->make());
+        return response()->json(Post::factory(6)->make());
     }
 }
